@@ -4,6 +4,8 @@ import { Context, server } from "../main";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
+// frontend part is on render.com
+
 const Header = () => {
   const { isAuthenticated, SetIsAuthenticated, loader, SetLoader } = useContext(Context);
 
@@ -29,8 +31,8 @@ const Header = () => {
         <h2>ToDo APP.</h2>
       </div>
       <article>
-        <Link to={"/"}>Home</Link>
-        <Link to={"/profile"}>Profile</Link>
+        <Link to={"/"}>ToDo</Link>
+        {/* <Link to={"/profile"}>Profile</Link> */}
 
         {isAuthenticated ? (
           <button disabled={loader} className="btn" onClick={logoutHandler}>LogOut</button>
